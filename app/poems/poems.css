@@ -1,0 +1,5 @@
+.poems-container {
+  display: flex;
+  gap: 24px;
+  padding: 16px;
+}

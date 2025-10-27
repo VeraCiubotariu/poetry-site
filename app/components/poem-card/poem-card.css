@@ -1,0 +1,39 @@
+.poem-card {
+  border: 1px solid black;
+  width: 200px;
+  padding: 32px;
+  text-align: center;
+}
+
+.poem-card:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transform: translateY(-4px);
+  transition: all 0.3s ease;
+}
+
+.poem-card:active {
+  background: rgb(255, 226, 231);
+}
+
+.poem-card h1 {
+  display: flex;
+  font-size: 24px;
+  font-weight: 600;
+  height: 64px;
+  color: var(--dusty-rose);
+  margin-bottom: 16px;
+  justify-content: center;
+  align-items: center;
+}
+
+.verses-container {
+  font-size: 16px;
+  white-space: nowrap;
+  height: 120px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.verse {
+  text-wrap: wrap;
+}
