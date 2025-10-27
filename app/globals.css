@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
+  --background: #f1e7e7;
   --dusty-rose: #cd7674;
 }
 
@@ -14,11 +14,12 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #ffffff;
+    --background: #f8f5f2;
   }
 }
 
 body {
+  background: var(--background);
   font-family: "Cormorant", serif;
   font-optical-sizing: auto;
   font-weight: 400;
