@@ -1,4 +1,4 @@
 main {
   overflow-x: auto;
-  height: 100vh;
+  height: calc(100vh - 64px);
 }

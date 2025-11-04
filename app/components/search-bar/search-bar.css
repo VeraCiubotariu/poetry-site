@@ -1,0 +1,9 @@
+.searchbar {
+  border: 1px solid black;
+  border-radius: 4px;
+  padding: 4px 8px 4px 38px;
+  width: 240px;
+  background: url("/search-icon.png") no-repeat left;
+  background-size: 16px;
+  background-position: 8px;
+}

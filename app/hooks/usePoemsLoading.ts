@@ -1,4 +1,5 @@
 "use client";
+import { get } from "http";
 import { Poem } from "../models";
 import { useEffect, useState } from "react";
 
@@ -23,5 +24,9 @@ export const usePoemsLoading = () => {
     load();
   }, []);
 
-  return { poems, loadPoems };
+  const getPoemById = (id: string): Poem | undefined => {
+    return poems?.find((poem) => poem.title === id);
+  };
+
+  return { poems, loadPoems, getPoemById };
 };

@@ -2,7 +2,7 @@ import { Header } from "../header";
 import "./page-layout.css";
 
 export type PageLayoutProps = {
-  selectedNavButton: "poems" | "songs" | "about";
+  selectedNavButton?: "poems" | "songs" | "about";
   children: React.ReactNode;
 };
 
