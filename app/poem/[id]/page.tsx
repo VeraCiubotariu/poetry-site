@@ -11,23 +11,27 @@ export default function PoemPage() {
   const poem = getPoemById(id);
 
   return (
-    <PageLayout>
-      <div className="poem-container">
-        <h1>{poem?.title}</h1>
-        <div className="poem-page-verse">
-          {poem?.verses.map((verse, verseIndex) => (
-            <div key={verseIndex}>
-              <div className="verse" key={verseIndex}>
-                {verse.map((line, lineIndex) => (
-                  <div key={`${verseIndex}${lineIndex}`}>{line}</div>
-                ))}
-              </div>
-              <br />
+    <>
+      <PageLayout>
+        <div className="poem-page-container">
+          <div className="poem-container">
+            <h1>{poem?.title}</h1>
+            <div className="poem-page-verse">
+              {poem?.verses.map((verse, verseIndex) => (
+                <div key={verseIndex}>
+                  <div className="verse" key={verseIndex}>
+                    {verse.map((line, lineIndex) => (
+                      <div key={`${verseIndex}${lineIndex}`}>{line}</div>
+                    ))}
+                  </div>
+                  <br />
+                </div>
+              ))}
             </div>
-          ))}
+          </div>
         </div>
-      </div>
+      </PageLayout>
       <div className="flower" />
-    </PageLayout>
+    </>
   );
 }

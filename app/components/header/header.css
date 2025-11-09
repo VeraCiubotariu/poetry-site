@@ -4,6 +4,7 @@
   padding: 16px 32px 16px 32px;
   display: flex;
   align-items: center;
+  z-index: 10;
 }
 
 .logo {
@@ -33,4 +34,32 @@
   display: flex;
   gap: 32px;
   justify-content: flex-end;
+}
+
+@media screen and (max-width: 768px) {
+  .header-right {
+    flex: none;
+  }
+
+  .header-left {
+    display: none;
+  }
+
+  .nav-about-button {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .mobile-menu-button {
+    display: none;
+  }
+}
+
+.mobile-menu-button {
+  background: url("/menu-icon.png") no-repeat;
+  background-size: contain;
+  width: 16px;
+  height: 16px;
+  opacity: 0.8;
 }

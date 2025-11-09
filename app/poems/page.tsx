@@ -5,13 +5,12 @@ import { SearchBar } from "../components/search-bar";
 import { usePoemsLoading } from "../hooks";
 import React from "react";
 import "./poems.css";
+import { poemFilter } from "../utils";
 
 export default function PoemsPage() {
   const { poems } = usePoemsLoading();
   const [filter, setFilter] = React.useState("");
-  const filteredPoems = poems?.filter((poem) =>
-    poem.title.toLowerCase().includes(filter.toLowerCase())
-  );
+  const filteredPoems = poems?.filter((poem) => poemFilter(poem, filter));
 
   return (
     <PageLayout selectedNavButton="poems">
@@ -21,7 +20,7 @@ export default function PoemsPage() {
       <div className="poems-page-container">
         <div className="poems-container">
           {filteredPoems?.map((poem) => (
-            <PoemCard key={poem.title} poem={poem} />
+            <PoemCard key={poem.title + poem.verses[0]} poem={poem} />
           ))}
         </div>
       </div>

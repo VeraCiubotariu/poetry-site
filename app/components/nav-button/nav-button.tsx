@@ -6,13 +6,19 @@ export type NavButtonProps = {
   title: string;
   selected?: boolean;
   href: string;
+  className?: string;
 };
 
-export const NavButton = ({ title, selected, href }: NavButtonProps) => {
+export const NavButton = ({
+  title,
+  selected,
+  href,
+  className,
+}: NavButtonProps) => {
   return (
     <Link
       href={href}
-      className={classNames("nav-button", { selected: selected })}
+      className={classNames("nav-button", className, { selected: selected })}
     >
       {title}
     </Link>

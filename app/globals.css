@@ -3,6 +3,7 @@
 :root {
   --background: #f1e7e7;
   --dusty-rose: #cd7674;
+  --mobile-max-width: 768px;
 }
 
 @theme inline {

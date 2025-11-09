@@ -1,0 +1,19 @@
+.author {
+  background: url("/cori.png") no-repeat;
+  background-size: contain;
+  background-position: -160px 0;
+  position: sticky;
+  height: 80vh;
+  bottom: 0;
+  left: 0;
+  z-index: 1;
+}
+
+@media screen and (max-width: 768px) {
+  .author {
+    background-size: cover;
+    background-position: -100px 0;
+    height: 68vh;
+    /* height: 50vh; */
+  }
+}

@@ -1,10 +1,13 @@
-import { Header } from "../components";
+import { PageLayout } from "../components/page-layout";
+import "./about.css";
 
 export default function AboutPage() {
   return (
     <>
-      <Header selectedNavButton="about" />
-      <div>About Page</div>
+      <PageLayout selectedNavButton="about">
+        <div>About Page</div>
+      </PageLayout>
+      <div className="author" />
     </>
   );
 }

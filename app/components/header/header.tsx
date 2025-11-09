@@ -20,9 +20,12 @@ export const Header = ({ selectedNavButton }: HeaderProps) => {
           href="/songs"
         />
       </div>
+
       <div className="logo">Corina Nica</div>
       <div className="header-right">
+        <button className="mobile-menu-button"></button>
         <NavButton
+          className="nav-about-button"
           title="Despre"
           selected={selectedNavButton === "about"}
           href="/about"

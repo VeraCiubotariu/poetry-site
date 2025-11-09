@@ -7,12 +7,11 @@
 
 .poem-card:hover {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  transform: translateY(-4px);
   transition: all 0.3s ease;
 }
 
 .poem-card:active {
-  background: rgb(255, 226, 231);
+  background: rgb(252, 235, 237);
 }
 
 .poem-card h1 {
