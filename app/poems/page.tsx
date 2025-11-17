@@ -6,11 +6,32 @@ import { usePoemsLoading } from "../hooks";
 import React from "react";
 import "./poems.css";
 import { poemFilter } from "../utils";
+import { useEffect } from "react";
 
 export default function PoemsPage() {
   const { poems } = usePoemsLoading();
   const [filter, setFilter] = React.useState("");
   const filteredPoems = poems?.filter((poem) => poemFilter(poem, filter));
+
+  useEffect(() => {
+    if (!filteredPoems) return;
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("poem-card-animation");
+        } else {
+          entry.target.classList.remove("poem-card-animation");
+        }
+      });
+    });
+
+    const elements = document.querySelectorAll(".poem-card");
+
+    elements.forEach((el) => observer.observe(el));
+
+    return () => observer.disconnect();
+  }, [filteredPoems]);
 
   return (
     <PageLayout selectedNavButton="poems">

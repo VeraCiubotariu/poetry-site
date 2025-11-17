@@ -5,6 +5,22 @@
   text-align: center;
 }
 
+.poem-card-animation {
+  animation: smooth-appear 1s ease forwards;
+}
+
+@keyframes smooth-appear {
+  from {
+    box-shadow: 0 -16px 16px 0px rgba(0, 0, 0, 0.2);
+    transform: translateY(16px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
 .poem-card:hover {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   transition: all 0.3s ease;
@@ -15,21 +31,25 @@
 }
 
 .poem-card h1 {
-  display: flex;
   font-size: 24px;
   font-weight: 600;
-  height: 64px;
   color: var(--dusty-rose);
   margin-bottom: 16px;
-  justify-content: center;
-  align-items: center;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  text-overflow: ellipsis;
+  white-space: normal;
+  height: 64px;
 }
 
 .verses-container {
   font-size: 16px;
-  white-space: nowrap;
-  height: 120px;
+  max-height: 120px;
+  max-width: 200px;
   overflow: hidden;
+  white-space: normal;
   text-overflow: ellipsis;
 }
 

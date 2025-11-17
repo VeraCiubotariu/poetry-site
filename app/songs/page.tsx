@@ -1,3 +1,4 @@
+import { LazyIframe } from "../components";
 import { PageLayout } from "../components/page-layout";
 import "./songs.css";
 
@@ -33,22 +34,7 @@ export default function SongsPage() {
       <div className="songs-page-container">
         <div className="songs-container">
           {songsLinks.map((link, index) => (
-            <div id={`song-${index}`} key={link} style={{ margin: "20px 0" }}>
-              <iframe
-                // width="560"
-                // height="315"
-                src={link}
-                title="YouTube video player"
-                allow="accelerometer; 
-  autoplay; 
-  clipboard-write; 
-  encrypted-media; 
-  gyroscope; 
-  picture-in-picture; 
-  web-share"
-                allowFullScreen
-              ></iframe>
-            </div>
+            <LazyIframe src={link} title={`Video ${index}`} key={index} />
           ))}
         </div>
       </div>

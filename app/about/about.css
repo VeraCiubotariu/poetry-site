@@ -6,14 +6,43 @@
   height: 80vh;
   bottom: 0;
   left: 0;
-  z-index: 1;
+  z-index: -1;
+}
+
+.button-bar {
+  display: flex;
+  gap: 12px;
+  margin-left: 84px;
+  position: sticky;
+  bottom: 12px;
+  left: 32px;
+  z-index: 10;
+}
+
+.button-bar button {
+  width: 24px;
+  height: 24px;
+  background-size: contain;
+}
+
+.facebook-button {
+  background: url("/facebook-icon.png");
+}
+
+.youtube-button {
+  background: url("/youtube-icon.png");
 }
 
 @media screen and (max-width: 768px) {
   .author {
     background-size: cover;
-    background-position: -100px 0;
+    background-position: 10% 0;
     height: 68vh;
-    /* height: 50vh; */
+  }
+
+  .button-bar {
+    flex-direction: column;
+    margin-left: 12px;
+    gap: 0;
   }
 }

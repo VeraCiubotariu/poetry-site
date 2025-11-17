@@ -1,10 +1,7 @@
-.songs-page-container {
-}
-
 .songs-container {
   display: flex;
   flex-wrap: wrap;
-  column-gap: 24px;
+  gap: 24px;
   justify-content: center;
   width: fit-content;
   padding: 16px 16px 48px 16px;
