@@ -3,11 +3,12 @@ import "./search-bar.css";
 import { useDebounce } from "@/app/hooks";
 
 export type SearchBarProps = {
+  initialValue?: string;
   onChange?: (newValue: string) => void;
 };
 
-export const SearchBar = ({ onChange }: SearchBarProps) => {
-  const [value, setValue] = React.useState("");
+export const SearchBar = ({ initialValue, onChange }: SearchBarProps) => {
+  const [value, setValue] = React.useState(initialValue || "");
   const debouncedOnChange = useDebounce(onChange, 300);
 
   return (

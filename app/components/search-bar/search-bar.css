@@ -7,3 +7,9 @@
   background-size: 16px;
   background-position: 8px;
 }
+
+@media screen and (max-width: 768px) {
+  .searchbar {
+    width: 100%;
+  }
+}

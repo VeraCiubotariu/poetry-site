@@ -1,31 +1,14 @@
 "use client";
 import { Poem } from "../models";
-import { useEffect, useState } from "react";
+import * as poemsConfig from "../../public/poems.json";
+import { getPoemId } from "../utils";
 
 export const usePoemsLoading = () => {
-  const poemsFilePath = "/poems.json";
-  const [poems, setPoems] = useState<Poem[] | undefined>(undefined);
-
-  const loadPoems = async () => {
-    const response = await fetch(poemsFilePath);
-    if (!response.ok) {
-      throw new Error("Failed to load poems data");
-    }
-    const data = await response.json();
-    setPoems(data.poems as Poem[]);
-  };
-
-  useEffect(() => {
-    function load() {
-      loadPoems();
-    }
-
-    load();
-  }, []);
+  const poems = poemsConfig.poems;
 
   const getPoemById = (id: string): Poem | undefined => {
-    return poems?.find((poem) => poem.title === id);
+    return poems?.find((poem) => getPoemId(poem) === id);
   };
 
-  return { poems, loadPoems, getPoemById };
+  return { poems, getPoemById };
 };

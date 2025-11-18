@@ -5,3 +5,4 @@ export * from "./page-layout";
 export * from "./poem-card";
 export * from "./search-bar";
 export * from "./lazy-iframe";
+export * from "./mobile-menu";

@@ -16,12 +16,12 @@
 }
 
 .about-section-animation {
-  animation: appear-from-right 1s ease;
+  animation: appear-from-right 2s ease;
 }
 
 @keyframes appear-from-right {
   from {
-    transform: translateX(120px);
+    transform: translateX(20%);
     opacity: 0;
   }
   to {
