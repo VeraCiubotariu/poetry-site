@@ -1,18 +1,22 @@
 import { Poem } from "@/app/models";
-import "./poem-card.css";
 import Link from "next/link";
-import { get } from "http";
 import { getPoemId } from "@/app/utils";
+import "./poem-card.css";
 
 export type PoemCardProps = {
   poem: Poem;
+  onClick?: () => void;
 };
 
-export const PoemCard = ({ poem }: PoemCardProps) => {
+export const PoemCard = ({ poem, onClick }: PoemCardProps) => {
   const { title, verses } = poem;
 
   return (
-    <Link className="poem-card" href={`poem/${getPoemId(poem)}`}>
+    <Link
+      className="poem-card"
+      href={`poem/${getPoemId(poem)}`}
+      onClick={onClick}
+    >
       <h1>{title}</h1>
       <div className="verses-container">
         {verses.map((verse, verseIndex) => (

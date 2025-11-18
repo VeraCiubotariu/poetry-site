@@ -4,23 +4,31 @@ import React, { createContext, useContext, useState } from "react";
 const AppContext = createContext<{
   filter: string;
   setFilter: (value: string) => void;
-  // isMobileMenuOpen: boolean;
-  // setIsMobileMenuOpen: (value: boolean) => void;
+  poemsScrollPosition?: number;
+  setPoemsScrollPosition: (value: number) => void;
 }>({
   filter: "",
   setFilter: () => {},
-  // isMobileMenuOpen: false,
-  // setIsMobileMenuOpen: () => {},
+  setPoemsScrollPosition: () => {},
 });
 
 export const AppProvider: React.FC<{ children: React.ReactNode }> = ({
   children,
 }) => {
   const [filter, setFilter] = useState("");
-  // const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [poemsScrollPosition, setPoemsScrollPosition] = useState<
+    number | undefined
+  >(undefined);
 
   return (
-    <AppContext.Provider value={{ filter, setFilter }}>
+    <AppContext.Provider
+      value={{
+        filter,
+        setFilter,
+        poemsScrollPosition,
+        setPoemsScrollPosition,
+      }}
+    >
       {children}
     </AppContext.Provider>
   );
