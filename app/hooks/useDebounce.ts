@@ -1,14 +1,14 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 "use client";
 import { useRef } from "react";
 
-export const useDebounce = (cb, delay) => {
-  const timeoutId = useRef();
+export const useDebounce = (cb: any, delay: number) => {
+  const timeoutId = useRef<number | undefined>(undefined);
 
-  return function (...args) {
-    if (timeoutId.current) {
-      // This check is not strictly necessary
+  return function debouncedFunction(...args: any[]) {
+    if (timeoutId.current !== undefined) {
       clearTimeout(timeoutId.current);
     }
-    timeoutId.current = setTimeout(() => cb(...args), delay);
+    timeoutId.current = window.setTimeout(() => cb(...args), delay);
   };
 };
