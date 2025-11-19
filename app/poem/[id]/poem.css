@@ -11,7 +11,7 @@
   flex-direction: column;
   align-items: center;
   justify-items: center;
-  padding: 32px 12px 48px 12px;
+  padding: 32px 48px 72px 48px;
 }
 
 .poem-container h1 {
@@ -31,6 +31,16 @@
   font-size: 20px;
   z-index: 2;
   overflow: visible;
+}
+
+@media screen and (max-width: 768px) {
+  .poem-container h1 {
+    font-size: 32px;
+  }
+
+  .poem-page-verse {
+    font-size: 18px;
+  }
 }
 
 .flower {

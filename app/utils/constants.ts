@@ -1,3 +1,5 @@
+import { Song } from "../models";
+
 export const aboutTexts = [
   "Dacă vrei să știi cine și ce sunt, te invit să citești cărțile mele și să asculți muzica noastră.\nEu sunt Corina Nica, născută în 12 august 1975, absolventă a Facultății de Litere, Istorie și Filosofie, licențiată în 2003 a Universității de Vest, Timișoara.",
   `În timpul studiilor am participat la laboratoarele de creație ale Cenaclului Literar brașovean ,,INTERVAL", publicând pentru prima dată versuri în publicația ,,Drum nou" la 14 ani.\nÎn 5 noiembrie 2012 am format la Codlea, Brașov, Cenaclul ,,Dincolo de cuvinte" , întâlnirile de suflet fiind un prilej de a etala scrierile noastre. Veneau la aceste seri de literatură iubitori de carte din întreaga Țară a Bârsei.`,
@@ -13,28 +15,89 @@ export const aboutTexts = [
   "Cu respect,\nCorina Nica.",
 ];
 
-export const songsLinks = [
-  "https://www.youtube.com/embed/Wm-k5u394ng",
-  "https://www.youtube.com/embed/fSPk_1OMHu0",
-  "https://www.youtube.com/embed/4u4P5ouCQZI",
-  "https://www.youtube.com/embed/cic43dIVQcs",
-  "https://www.youtube.com/embed/9foobVuWE2E",
-  "https://www.youtube.com/embed/Zpwbvb_4kzE",
-  "https://www.youtube.com/embed/gi3hntXw-KA",
-  "https://www.youtube.com/embed/s8_MKZ4pZS8",
-  "https://www.youtube.com/embed/eaktNokxnno",
-  "https://www.youtube.com/embed/L9wxkz3JYkY",
-  "https://www.youtube.com/embed/Fi8ly2ekxhw",
-  "https://www.youtube.com/embed/WcnterHIDgU",
-  "https://www.youtube.com/embed/iD1RhfD4C2A",
-  "https://www.youtube.com/embed/UZtxbeJFf8U",
-  "https://www.youtube.com/embed/b6INQJzvbKw",
-  "https://www.youtube.com/embed/EvwTIdhBats",
-  "https://www.youtube.com/embed/zB7lN3pBpIs",
-  "https://www.youtube.com/embed/lf9Jjpes5eQ",
-  "https://www.youtube.com/embed/CFlQ8RTzXR8",
-  "https://www.youtube.com/embed/UMMZNUPHGTU",
-  "https://www.youtube.com/embed/zK62Iwa2Isg",
-  "https://www.youtube.com/embed/NpAHtwqrRic",
-  "https://www.youtube.com/embed/08sWg4fDFBo",
+export const songs: Song[] = [
+  {
+    title: "Strada cu flori",
+    link: "https://www.youtube.com/embed/Wm-k5u394ng",
+  },
+  {
+    title: "Zi, bade, cu fluieră",
+    link: "https://www.youtube.com/embed/fSPk_1OMHu0",
+  },
+  {
+    title: "S-a întâmplat",
+    link: "https://www.youtube.com/embed/4u4P5ouCQZI",
+  },
+  {
+    title: "Melodia pentru tine",
+    link: "https://www.youtube.com/embed/cic43dIVQcs",
+  },
+  {
+    title: "Iubirea",
+    link: "https://www.youtube.com/embed/9foobVuWE2E",
+  },
+  {
+    title: "În locul tău, toamnă",
+    link: "https://www.youtube.com/embed/Zpwbvb_4kzE",
+  },
+  {
+    title: "Hai cu mine",
+    link: "https://www.youtube.com/embed/s8_MKZ4pZS8",
+  },
+  {
+    title: "Gust de toamnă",
+    link: "https://www.youtube.com/embed/eaktNokxnno",
+  },
+  {
+    title: "Declarație de dragoste",
+    link: "https://www.youtube.com/embed/L9wxkz3JYkY",
+  },
+  {
+    title: "Dacă tu nu m-ai iubi",
+    link: "https://www.youtube.com/embed/Fi8ly2ekxhw",
+  },
+  {
+    title: "Dacă aș fi eu",
+    link: "https://www.youtube.com/embed/WcnterHIDgU",
+  },
+  {
+    title: "Anotimp cu dragoste",
+    link: "https://www.youtube.com/embed/iD1RhfD4C2A",
+  },
+  {
+    title: "Abajurul iubirii",
+    link: "https://www.youtube.com/embed/UZtxbeJFf8U",
+  },
+  {
+    title: "O lume numai pentru noi",
+    link: "https://www.youtube.com/embed/b6INQJzvbKw",
+  },
+  {
+    title: "Cântec de iarnă",
+    link: "https://www.youtube.com/embed/EvwTIdhBats",
+  },
+  {
+    title: "Fără ploi",
+    link: "https://www.youtube.com/embed/zB7lN3pBpIs",
+  },
+  {
+    title: "La Viflaim colo-n jos",
+    link: "https://www.youtube.com/embed/CFlQ8RTzXR8",
+  },
+  {
+    title: "Tzel Etz Tamar",
+    link: "https://www.youtube.com/embed/UMMZNUPHGTU",
+  },
+  {
+    title: "Bucurați-vă, prieteni",
+    link: "https://www.youtube.com/embed/zK62Iwa2Isg",
+  },
+  {
+    title: "Elegie",
+    link: "https://www.youtube.com/embed/NpAHtwqrRic",
+  },
+  {
+    title: "Ritual",
+    link: "https://www.youtube.com/embed/08sWg4fDFBo",
+  },
 ];

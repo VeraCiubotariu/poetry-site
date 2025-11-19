@@ -3,7 +3,7 @@
   background-size: contain;
   background-position: -160px 0;
   position: sticky;
-  height: 80vh;
+  height: 80dvh;
   bottom: 0;
   left: 0;
   z-index: -1;
@@ -37,7 +37,7 @@
   .author {
     background-size: cover;
     background-position: 10% 0;
-    height: 68vh;
+    height: 68dvh;
   }
 
   .button-bar {

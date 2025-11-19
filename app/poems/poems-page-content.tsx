@@ -56,7 +56,6 @@ export const PoemsPageContent = () => {
               onClick={() => {
                 const offset = (document.querySelector("main") as any)
                   .scrollTop;
-                console.log("Setting scroll position:", offset);
                 setPoemsScrollPosition(offset);
               }}
             />

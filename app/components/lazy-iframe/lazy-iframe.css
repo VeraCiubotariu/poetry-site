@@ -1,18 +1,16 @@
-.iframe-placeholder {
-  width: 320px;
-  height: 160px;
+.song-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
 }
 
-.shimmer {
-  background: linear-gradient(90deg, #ededed 30%, #dcdcdc 50%, #ededed 70%);
-  background-size: 400%;
-  animation: shimmer 1.5s infinite linear;
+.iframe-wrapper {
+  width: 320px;
+  height: 180px;
+  background-color: grey;
 }
-@keyframes shimmer {
-  0% {
-    background-position: 100% 100%;
-  }
-  100% {
-    background-position: 0 0;
-  }
+
+.song-title {
+  border: 1px solid grey;
+  padding: 4px 16px;
 }
