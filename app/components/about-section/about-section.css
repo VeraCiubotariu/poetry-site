@@ -1,7 +1,7 @@
 .about-section-container {
   display: flex;
   width: 100%;
-  height: 100%;
+  height: calc(100dvh - 64px);
   align-items: center;
   justify-content: flex-end;
   padding-left: 40%;
@@ -13,6 +13,7 @@
   padding-right: 24px;
   text-align: right;
   background: radial-gradient(ellipse, var(--background), transparent);
+  will-change: transform;
 }
 
 .about-section-animation {
@@ -21,10 +22,11 @@
 
 @keyframes appear-from-right {
   from {
-    transform: translateX(20%);
+    transform: translateX(16%);
     opacity: 0;
   }
   to {
+    transform: translateX(0);
     opacity: 1;
   }
 }
