@@ -1,5 +1,9 @@
 import { Poem } from "../models";
 
 export const getPoemId = (poem: Poem): string => {
-  return `${poem.title}${poem.verses[0]}`.replace(/[^a-zA-Z]/g, "");
+  const cleanedPoemTitle = poem.title
+    .toLowerCase()
+    .replace(/[^a-zăâîșşț\- ]/g, "")
+    .replace(/[ ]/g, "-");
+  return `${cleanedPoemTitle}-${poem.id}`;
 };
